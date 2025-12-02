@@ -9,6 +9,7 @@
 *.so.*
 *.dll
 *.dylib
+*.exe
 
 # Qt-es
 object_script.*.Release
@@ -31,6 +32,10 @@ Makefile*
 *build-*
 *.qm
 *.prl
+
+# Qt Creator build directories
+build-*/
+Desktop_Qt_*/
 
 # Qt unit tests
 target_wrapper.*

@@ -10,19 +10,22 @@ CONFIG += c++17
 QT += widgets network
 
 SOURCES += \
-    chatwindow.cpp \
-    main.cpp \
-    mainwindow.cpp
+    src/chatwindow.cpp \
+    src/main.cpp \
+    src/mainwindow.cpp
 
 HEADERS += \
-    chatwindow.h \
-    mainwindow.h
+    src/chatwindow.h \
+    src/mainwindow.h
 
 FORMS += \
-    chatwindow.ui \
-    mainwindow.ui
+    src/chatwindow.ui \
+    src/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    assets/assets.qrc

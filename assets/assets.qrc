@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+
+<RCC>
+    <qresource prefix="/">
+        <file>RoomlyChat.png</file>
+    </qresource>   
+</RCC>
