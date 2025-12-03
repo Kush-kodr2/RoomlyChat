@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->nicknameInput->setFocus();
+    setWindowTitle("Roomly Chat Home");
+    connect(ui->nicknameInput, &QLineEdit::returnPressed, this, &MainWindow::on_joinButton_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -24,9 +26,8 @@ void MainWindow::on_joinButton_clicked()
         return;
     }
 
-    ChatWindow *chat = new ChatWindow(name);
+    ChatWindow *chat = new ChatWindow(name, this);
     chat -> show();
-
-    this->close();
+    this->hide();
 }
 

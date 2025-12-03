@@ -17,8 +17,19 @@ public:
     explicit ChatWindow(QString username ,QWidget *parent = nullptr);
     ~ChatWindow();
 
+private slots:
+    void on_sendButton_clicked();
+    void onSocketReadyRead();
+    void onSocketConnected();
+    void onSocketErrorOccured(QAbstractSocket::SocketError socketError);
+
+    void on_leavechatButton_clicked();
+
 private:
     Ui::ChatWindow *ui;
+    QTcpSocket *socket;
+    QString username;
+    QWidget *mainwindowPtr;
 };
 
 #endif // CHATWINDOW_H
